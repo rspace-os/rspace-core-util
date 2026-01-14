@@ -307,7 +307,7 @@ public class ImageUtils {
 		int sampling = calculateSampling(reader.getWidth(0));
 		params.setSourceSubsampling(sampling, sampling, 0, 0);
 
-    return reader.read(0, params);
+		return reader.read(0, params);
 	}
 
 	private static int calculateSampling(float width) {
@@ -390,8 +390,9 @@ public class ImageUtils {
 	public static byte[] toBytes(BufferedImage img, String outputFormat) throws IOException {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		ImageIO.write(img, outputFormat, baos);
-    return baos.toByteArray();
+		return baos.toByteArray();
 	}
+
 	/**
 	 * Rotates a tiff file by a multiple of Pi/2 radians (90 degrees).<br/>
 	 * This uses the underlying ImageJ library to handle rotation. <br/>
