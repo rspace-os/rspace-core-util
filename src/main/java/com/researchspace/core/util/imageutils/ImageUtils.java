@@ -152,12 +152,12 @@ public class ImageUtils {
 
 		if (isTiff(extensionType)) {
 			File tempTiff = File.createTempFile("original", ".tif");
-      try (stream; FileOutputStream fos = new FileOutputStream(tempTiff)) {
-        byte[] buff = new byte[1024];
-        while (stream.read(buff) != -1) {
-          fos.write(buff);
-        }
-      }
+			try (stream; FileOutputStream fos = new FileOutputStream(tempTiff)) {
+				byte[] buff = new byte[1024];
+				while (stream.read(buff) != -1) {
+					fos.write(buff);
+				}
+			}
 			return getBufferedImageFromTiffFile(tempTiff);
 		}
 		return getBufferedImageFromInputImageStream(stream);
