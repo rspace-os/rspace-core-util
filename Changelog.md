@@ -2,7 +2,8 @@
 
 ## 1.0.5 2026-01-14
 - switch to parent-pom 2.1.2 (spring 5.3.25 -> 5.3.39, commons-codec 1.11 -> 1.13)
-- sort internally conflicting dependencies & update commons-compress (1.26.2 -> 1.28.0)
+- update commons-compress (1.26.2 -> 1.28.0) and commons-io (2.14 -> 2.20)
+- sort internally conflicting dependencies 
 - some refactoring of ImageUtils, including more robust validation of incoming base64 image string 
 
 ## 1.0.4 2026-01-05
